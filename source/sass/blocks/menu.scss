@@ -1,0 +1,31 @@
+.menu__list {
+  display: flex;
+}
+
+.menu__list--mobile {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.menu__link {
+  padding: 26px 18px 21px 43px;
+  color: rgb(52, 89, 150);
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: rgb(16, 16, 16);
+  }
+
+  &:active {
+    color: rgba(16, 16, 16, 0.6);
+  }
+}
