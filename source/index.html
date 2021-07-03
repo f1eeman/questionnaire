@@ -5,16 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Анкета</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
 </head>
 <body>
   <div class="wrapper wrapper--shadow wrapper--global">
-    <div class="header">
-      <div class="menu">
+    <div class="page-header">
+      <div class="page-header__menu menu">
         <div class="menu__wrap">
           <div class="menu__list menu__list--mobile">
             <div class="menu__item">
-              <a href="" class="menu__link">Личная информация</a>
+              <a href="" class="menu__link">
+                Личная информация
+              </a>
             </div>
             <div class="menu__item">
               <a href="" class="menu__link">
@@ -34,6 +36,126 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="page-main">
+      <h1 class="page-main__title">Анкета</h1>
+      <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="form__fieldset form__fieldset--info">
+          <div class="form__container">
+            <h2 class="form__title">Личная информация</h2>
+            <div class="form__field">
+              <label class="form__label" for="fio">ФИО</label>
+              <input class="form__control" id="fio" name="fio" type="text">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="birth-year">Год рождения</label>
+              <select class="form__control form__control--select" name="birth-year">
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+                <option>1993</option>
+                <option>1992</option>
+                <option>1991</option>
+                <option>1990</option>
+                <option>1989</option>
+                <option>1988</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="address">Место проживания</label>
+              <input class="form__control" id="address" name="address" type="text">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="skype">Skype</label>
+              <input class="form__control" id="skype" name="skype" type="text">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">E-mail</label>
+              <input class="form__control" id="email" name="email" type="email">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--experience">
+          <div class="form__container">
+            <h2 class="form__title">Расскажите о своем опыте</h2>
+            <div class="form__wrap">
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="methodology" name="bem/oocss" type="checkbox">
+                <label class="form__label form__label--checkbox" for="methodology">БЭМ/OOCSS</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="preprocessors" name="stylus/less/sass" type="checkbox">
+                <label class="form__label form__label--checkbox" for="preprocessors">Stylus/LESS/SASS</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="languages" name="php" type="checkbox">
+                <label class="form__label form__label--checkbox" for="languages">Знаком с PHP</label>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="layout" name="semantic_layout" type="checkbox">
+                <label class="form__label form__label--checkbox" for="layout">Верстаю семантично</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="cms" name="modx" type="checkbox">
+                <label class="form__label form__label--checkbox" for="cms">Знаю CMS ModX</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="task-manager" name="gulp/grunt" type="checkbox">
+                <label class="form__label form__label--checkbox" for="task-manager">Gulp/GRUNT</label>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="bundler" name="webpack" type="checkbox">
+                <label class="form__label form__label--checkbox" for="bundler">Webpack</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="libraries" name="jquery" type="checkbox">
+                <label class="form__label form__label--checkbox" for="libraries">Jquery</label>
+              </div>
+              <div class="form__field">
+                <input class="form__control form__control--checkbox visually-hidden" id="vcs" name="git" type="checkbox">
+                <label class="form__label form__label--checkbox" for="vcs">Использую Git</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--js">
+          <div class="form__container">
+            <h2 class="form__title">Уровень владения JavaScript</h2>
+            <input type="range" id="js-level" name="js-level" min="1" max="4" step="1" list="levels-list">
+            <datalist id="levels-list">
+              <option value="loser" label="Не владею"></option>
+              <option value="low" label="Использую готовые решения"></option>
+              <option value="medium" label="Использую готовые решения и умею и переделывать"></option>
+              <option value="strong" label="Пишу сложный JS с нуля"></option>
+            </datalist>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--about-yourself">
+          <div class="form__container">
+            <h2 class="form__title">Расскажите о себе</h2>
+            <div class="form__annotation">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</div>
+            <div class="form__wrap">
+              <label class="form__label visually-hidden" for="about-yourself">Дополнителя информация о себе</label>
+              <textarea class="form__control form__control--textarea" name="about-yourself" id="about-yourself" placeholder="Понравилась тем, что..."></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form__container">
+          <button class="form__button" type="submit">
+            Готово
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </body>
