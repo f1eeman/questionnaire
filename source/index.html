@@ -5,40 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Анкета</title>
-  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <div class="wrapper wrapper--shadow wrapper--global">
     <div class="page-header">
-      <div class="page-header__menu menu">
-        <div class="menu__wrap">
-          <div class="menu__list menu__list--mobile">
-            <div class="menu__item">
-              <a href="" class="menu__link">
-                Личная информация
-              </a>
-            </div>
-            <div class="menu__item">
-              <a href="" class="menu__link">
-                Опыт
-              </a>
-            </div>
-            <div class="menu__item">
-              <a href="" class="menu__link">
-                JavaScript
-              </a>
-            </div>
-            <div class="menu__item">
-              <a href="" class="menu__link">
-                О себе
-              </a>
-            </div>
+      <div class="page-header__title-wrap">
+        <h1 class="page-header__title">Анкета</h1>
+      </div>
+      <div class="page-header__nav nav nav--closed nav--nojs">
+        <div class="nav__toggle-box">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="nav__toggle-bar"></span>
+          </button>
+        </div>
+        <div class="nav__list">
+          <div class="nav__item">
+            <a href="" class="nav__link">
+              Личная информация
+            </a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">
+              Опыт
+            </a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">
+              JavaScript
+            </a>
+          </div>
+          <div class="nav__item">
+            <a href="" class="nav__link">
+              О себе
+            </a>
           </div>
         </div>
       </div>
     </div>
     <div class="page-main">
-      <h1 class="page-main__title">Анкета</h1>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__fieldset form__fieldset--info">
           <div class="form__container">
@@ -158,5 +164,6 @@
       </form>
     </div>
   </div>
+  <script src="js/index.min.js"></script>
 </body>
 </html>

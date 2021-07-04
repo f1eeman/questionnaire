@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
+const babel = require("gulp-babel");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
@@ -47,6 +48,9 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/index.js")
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
     .pipe(uglify())
     .pipe(rename("index.min.js"))
     .pipe(gulp.dest("build/js"))
