@@ -49,13 +49,12 @@
         <fieldset class="form__fieldset form__fieldset--info">
           <div class="form__container">
             <h2 class="form__title">Личная информация</h2>
-            <div class="form__field">
-              <label class="form__label" for="fio">ФИО</label>
-              <input class="form__control" id="fio" name="fio" type="text">
+            <div class="form__field form__field--info">
+              <input class="form__control form__control--info" id="fio" name="fio" type="text" required>
+              <label class="form__label form__label--info" for="fio">ФИО</label>
             </div>
-            <div class="form__field">
-              <label class="form__label" for="birth-year">Год рождения</label>
-              <select class="form__control form__control--select" name="birth-year">
+            <div class="form__field form__field--info">
+              <select class="form__control form__control--info form__control--select" name="birth-year" required>
                 <option>2002</option>
                 <option>2001</option>
                 <option>2000</option>
@@ -72,18 +71,19 @@
                 <option>1989</option>
                 <option>1988</option>
               </select>
+              <label class="form__label form__label--info" for="birth-year">Год рождения</label>
             </div>
-            <div class="form__field">
-              <label class="form__label" for="address">Место проживания</label>
-              <input class="form__control" id="address" name="address" type="text">
+            <div class="form__field form__field--info">
+              <input class="form__control form__control--info" id="address" name="address" type="text" required>
+              <label class="form__label form__label--info" for="address">Место проживания</label>
             </div>
-            <div class="form__field">
-              <label class="form__label" for="skype">Skype</label>
-              <input class="form__control" id="skype" name="skype" type="text">
+            <div class="form__field form__field--info">
+              <input class="form__control form__control--info" id="skype" name="skype" type="text" required>
+              <label class="form__label form__label--info" for="skype">Skype</label>
             </div>
-            <div class="form__field">
-              <label class="form__label" for="email">E-mail</label>
-              <input class="form__control" id="email" name="email" type="email">
+            <div class="form__field form__field--info">
+              <input class="form__control form__control--info" id="email" name="email" type="email" required>
+              <label class="form__label form__label--info" for="email">E-mail</label>
             </div>
           </div>
         </fieldset>

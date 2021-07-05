@@ -2,6 +2,11 @@
   padding-top: 20px;
 }
 
+.form__container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .form__fieldset {
   padding: 0;
   margin: 0;
@@ -12,6 +17,7 @@
   position: relative;
   padding-top: 80px;
   margin-top: 0;
+  margin-bottom: 45px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -44,6 +50,48 @@
 
 .form__fieldset--about-yourself .form__title::before {
   background-image: url("../img/icon4.svg");
+}
+
+.form__field--info {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form__control--info {
+  width: 100%;
+  padding: 25px 10px 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    border-color: rgb(52, 89, 150);
+  }
+}
+
+.form__label--info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgb(201, 201, 201);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.2s;
+}
+
+.form__control--info:focus ~ .form__label--info,
+.form__control--info:valid ~ .form__label--info {
+  font-size: 14px;
+  transform: translate(-50%, -25px);
+}
+
+.form__control--info:focus {
+  outline: none;
 }
 
 .form__button {
