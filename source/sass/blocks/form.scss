@@ -1,0 +1,24 @@
+.form__title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.form__button {
+  width: 114px;
+  height: 49px;
+  font: inherit;
+  color: rgb(255, 255, 255);
+  background-color: rgb(52, 89, 150);
+  border: 0;
+  border-radius: 8px;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(27, 60, 115);
+  }
+
+  &:active {
+    background-color: rgba(27, 60, 115, 0.6);
+  }
+}
