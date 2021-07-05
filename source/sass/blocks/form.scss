@@ -1,5 +1,6 @@
 .form {
   padding-top: 20px;
+  padding-bottom: 74px;
 }
 
 .form__container {
@@ -70,6 +71,10 @@
   &:focus {
     border-color: rgb(52, 89, 150);
   }
+
+  &:focus:invalid {
+    outline: 2px solid $color-error-border;
+  }
 }
 
 .form__label--info {
@@ -95,8 +100,10 @@
 }
 
 .form__button {
+  display: block;
   width: 114px;
   height: 49px;
+  margin: 0 auto;
   font: inherit;
   color: rgb(255, 255, 255);
   background-color: rgb(52, 89, 150);
@@ -105,10 +112,100 @@
 
   &:hover,
   &:focus {
+    outline: none;
     background-color: rgb(27, 60, 115);
   }
 
   &:active {
     background-color: rgba(27, 60, 115, 0.6);
+  }
+}
+
+.form__field--checkbox {
+  margin-bottom: 15px;
+}
+
+.form__control--checkbox:focus + .form__label--checkbox::before {
+  background-color: rgb(231, 240, 255);
+}
+
+.form__label--checkbox {
+  position: relative;
+  display: block;
+  min-height: 20px;
+  padding-left: 40px;
+  user-select: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(52, 89, 150);
+    border-radius: 3px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: rgb(231, 240, 255);
+  }
+}
+
+.form__control--checkbox:checked + .form__label--checkbox {
+  &::before {
+    background-color: rgb(52, 89, 150);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    display: block;
+    width: 11px;
+    height: 7px;
+
+    border: 2px solid rgb(255, 255, 255);
+    border-top-style: none;
+    border-right-style: none;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.form__annotation {
+  max-width: 492px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.form__control--textarea {
+  font: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  width: 100%;
+  height: 179px;
+  padding: 12px;
+  margin-bottom: 70px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: rgb(52, 89, 150);
+  }
+
+  &::placeholder {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(201, 201, 201);
   }
 }
