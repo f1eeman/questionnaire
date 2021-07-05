@@ -1,7 +1,49 @@
+.form {
+  padding-top: 20px;
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .form__title {
+  position: relative;
+  padding-top: 80px;
+  margin-top: 0;
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 47px;
+    height: 47px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateX(-50%);
+  }
+}
+
+.form__fieldset--info .form__title::before {
+  background-image: url("../img/icon1.svg");
+}
+
+.form__fieldset--experience .form__title::before {
+  background-image: url("../img/icon2.svg");
+}
+
+.form__fieldset--js .form__title::before {
+  background-image: url("../img/icon3.svg");
+}
+
+.form__fieldset--about-yourself .form__title::before {
+  background-image: url("../img/icon4.svg");
 }
 
 .form__button {
