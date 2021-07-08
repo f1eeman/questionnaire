@@ -18,8 +18,9 @@ thumb.addEventListener('mousedown', (e) => {
     if (newLeft < 0) {
       newLeft = 0;
     }
-    let rightEdge = slider.offsetWidth - 23;
-    if (newLeft > rightEdge) {
+    let rightEdge = slider.offsetWidth;
+    console.log('rightEdge', rightEdge);
+    if (newLeft >= rightEdge) {
       newLeft = rightEdge;
     }
 

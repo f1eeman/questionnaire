@@ -31,6 +31,11 @@ html {
   box-sizing: inherit;
 }
 
+.wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 .slider__wrap {
   position: relative;
   width: 100%;
@@ -40,6 +45,20 @@ html {
   background-image: url("../img/slider.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 728px;
+    height: 19px;
+    background-image: url("../img/dots.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
 }
 
 .progress {
@@ -52,10 +71,13 @@ html {
   background-image: url("../img/progressbar.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  // clip: rect(auto 300px auto auto);
+  background-size: contain;
+  clip: rect(auto 364px auto auto);
 }
 
 .thumb {
   position: absolute;
-  top: 14px;
+  top: 18px;
+  left: 50%;
+  margin-left: -12px;
 }
